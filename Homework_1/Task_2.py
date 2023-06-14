@@ -4,3 +4,19 @@
 #Если хотя бы в одном случае отрезок окажется больше суммы двух других, 
 #то треугольника с такими сторонами не существует. 
 #Отдельно сообщить является ли треугольник разносторонним, равнобедренным или равносторонним.
+
+def is_valid_triangle(side1, side2, side3):
+    if side1 == side2 == side3:
+        print("Треугоьник равносторонний")
+    elif side1 == side2 or side1 == side3 or side2 == side3:
+        print("Треугольник равнобедренный")
+    else: print("Треугольник разносторонний")
+        
+    if ((side1 + side2) > side3) and ((side1 + side3) > side2) and ((side3 + side2) > side1):
+        return True
+    else:
+        return False
+
+a, b, c = int(input("Введите размер 1 стороны треугольника: ")), int(input("Введите размер 2 стороны треугольника: ")), int(input("Введите размер 3 стороны треугольника: "))
+
+print(is_valid_triangle(a, b, c))
