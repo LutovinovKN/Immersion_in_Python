@@ -10,7 +10,8 @@ def is_valid_triangle(side1, side2, side3):
         print("Треугоьник равносторонний")
     elif side1 == side2 or side1 == side3 or side2 == side3:
         print("Треугольник равнобедренный")
-    else: print("Треугольник разносторонний")
+    else:
+        print("Треугольник разносторонний")
         
     if ((side1 + side2) > side3) and ((side1 + side3) > side2) and ((side3 + side2) > side1):
         return True
