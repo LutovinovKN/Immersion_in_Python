@@ -13,10 +13,10 @@ def is_valid_triangle(side1, side2, side3):
     else:
         print("Треугольник разносторонний")
         
-    if ((side1 + side2) > side3) and ((side1 + side3) > side2) and ((side3 + side2) > side1):
+    if side1 + side2 > side3 and side1 + side3 > side2 and side3 + side2 > side1:
         return True
-    else:
-        return False
+
+    return False
 
 a, b, c = int(input("Введите размер 1 стороны треугольника: ")), int(input("Введите размер 2 стороны треугольника: ")), int(input("Введите размер 3 стороны треугольника: "))
 
